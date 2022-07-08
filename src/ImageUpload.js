@@ -3,6 +3,8 @@ import firebase from "firebase";
 import { storage, db } from "./firebase";
 import "./ImageUpload.css";
 import { Input, Button } from "@material-ui/core";
+import axios from "./axios";
+
 
 const ImageUpload = ({ username }) => {
   const [image, setImage] = useState(null);
@@ -37,11 +39,20 @@ const ImageUpload = ({ username }) => {
           .ref("images")
           .child(image.name)
           .getDownloadURL()
-          .then((url) => {
+          .then((url) => 
+          {
             setUrl(url);
 
+          axios.post('/upload', 
+          {
+            caption: caption,
+            user: username,
+            image: url,
+          });
+
             // post image inside db
-            db.collection("posts").add({
+            db.collection("posts").add
+            ({
               imageUrl: url,
               caption: caption,
               username: username,
@@ -54,7 +65,10 @@ const ImageUpload = ({ username }) => {
           });
       }
     );
+
+    
   };
+  
 
   return (
     <div className="imageupload">
@@ -75,5 +89,7 @@ const ImageUpload = ({ username }) => {
     </div>
   );
 };
+
+
 
 export default ImageUpload;

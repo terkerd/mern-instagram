@@ -1,13 +1,13 @@
 import firebase from "firebase";
 
 const firebaseApp = firebase.initializeApp({
-  apiKey: "AIzaSyBucH7Kzm8Ds5CbuUs8uQJlzTPh3eZcTzA",
-  authDomain: "instagram-clone-23884.firebaseapp.com",
-  databaseURL: "https://instagram-clone-23884.firebaseio.com",
-  projectId: "instagram-clone-23884",
-  storageBucket: "instagram-clone-23884.appspot.com",
-  messagingSenderId: "671034896143",
-  appId: "1:671034896143:web:3aceafdf2319c9f1fc587a",
+  apiKey: "AIzaSyD26I9Emp20EA2zfB0UsSWQb4X8YqiH2o0",
+  authDomain: "ig-clone-c91d0.firebaseapp.com",
+  projectId: "ig-clone-c91d0",
+  storageBucket: "ig-clone-c91d0.appspot.com",
+  messagingSenderId: "1044258627831",
+  appId: "1:1044258627831:web:280bc6c173fd8a4559f3f2",
+  measurementId: "G-DP5Y0W9TMV"
 });
 
 const db = firebaseApp.firestore();
